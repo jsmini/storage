@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <script src="../dist/index.js"></script>
+  <script>
+    let l = new Storage() 
+    l.setLocal('zenquan', 23)
+    console.log(l.getLocal('zenquan'))
+    l.removeLocal('zenquan')
+    console.log(l.getLocal('zenquan'))
+    l.setLocal('jomsou', 24) 
+    l.clearLocal()
+    console.log(l.getLocal('jomsou'))
+    l.setSession('zenquan', 23)
+    console.log(l.getSession('zenquan'))
+    l.removeSession('zenquan')
+    console.log(l.getSession('zenquan'))
+    l.setSession('jomsou', 24) 
+    l.clearSession()
+    console.log(l.getSession('jomsou'))
+</script>
+</body>
+</html>
